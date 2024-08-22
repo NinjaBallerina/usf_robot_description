@@ -1,21 +1,29 @@
 <?xml version="1.0" ?>
 <robot name="usf_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+<!-- USF colors -->
+<material name="gold">
+  <color rgba="0.721 0.525 0.043 1.0"/>
+</material>
+<material name="dark_evergreen">
+  <color rgba="0.0 0.392 0.0 1.0"/>
+</material>
+
 <xacro:include filename="$(find usf_robot_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find usf_robot_description)/urdf/usf_robot.trans" />
 <xacro:include filename="$(find usf_robot_description)/urdf/usf_robot.gazebo" />
 <link name="base_link">
   <inertial>
-    <origin xyz="-0.00011658729776484125 -0.0004756491700753272 0.030535861246925023" rpy="0 0 0"/>
-    <mass value="6.272639312711816"/>
-    <inertia ixx="0.010743" iyy="0.010452" izz="0.014218" ixy="1e-06" iyz="7e-06" ixz="2.1e-05"/>
+    <origin xyz="4.095840186019689e-05 -0.00047837113585616297 0.030465846604467023" rpy="0 0 0"/>
+    <mass value="6.2514798322801415"/>
+    <inertia ixx="0.01073" iyy="0.010393" izz="0.014172" ixy="-0.0" iyz="8e-06" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find usf_robot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="gold"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -36,7 +44,7 @@
     <geometry>
       <mesh filename="file://$(find usf_robot_description)/meshes/link0_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="dark_evergreen"/>
   </visual>
   <collision>
     <origin xyz="0.0002 0.000356 -0.07854" rpy="0 0 0"/>
@@ -48,42 +56,42 @@
 
 <link name="link1_1">
   <inertial>
-    <origin xyz="-0.18024696035304172 0.20417584818746776 -0.31872975492036304" rpy="0 0 0"/>
-    <mass value="0.19172228733298213"/>
-    <inertia ixx="0.000679" iyy="0.000532" izz="0.000173" ixy="0.0" iyz="1.7e-05" ixz="-1e-06"/>
+    <origin xyz="-0.0019587652913026312 0.034488416417771325 0.06565011429736459" rpy="0 0 0"/>
+    <mass value="1.1661006941164045"/>
+    <inertia ixx="0.004129" iyy="0.003233" izz="0.001055" ixy="1e-06" iyz="0.000103" ixz="-5e-06"/>
   </inertial>
   <visual>
-    <origin xyz="-0.180211 0.205134 -0.529867" rpy="0 0 0"/>
+    <origin xyz="-0.003934 0.034413 -0.147151" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find usf_robot_description)/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://usf_robot_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="dark_evergreen"/>
   </visual>
   <collision>
-    <origin xyz="-0.180211 0.205134 -0.529867" rpy="0 0 0"/>
+    <origin xyz="-0.003934 0.034413 -0.147151" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find usf_robot_description)/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://usf_robot_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="link2_1">
   <inertial>
-    <origin xyz="-0.0008459448150377194 0.0348772319429049 0.059014071981613125" rpy="0 0 0"/>
-    <mass value="0.9310977870000888"/>
-    <inertia ixx="0.002972" iyy="0.002261" izz="0.000867" ixy="-0.0" iyz="-2e-06" ixz="1e-05"/>
+    <origin xyz="-0.0006992106483605159 0.034752006278891 0.06238936881043755" rpy="0 0 0"/>
+    <mass value="1.2752880173767804"/>
+    <inertia ixx="0.003526" iyy="0.002718" izz="0.001303" ixy="1e-06" iyz="4.5e-05" ixz="-4.8e-05"/>
   </inertial>
   <visual>
-    <origin xyz="-0.000411 0.035567 -0.272461" rpy="0 0 0"/>
+    <origin xyz="-0.004434 0.033467 -0.275786" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find usf_robot_description)/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://usf_robot_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="dark_evergreen"/>
   </visual>
   <collision>
-    <origin xyz="-0.000411 0.035567 -0.272461" rpy="0 0 0"/>
+    <origin xyz="-0.004434 0.033467 -0.275786" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find usf_robot_description)/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://usf_robot_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -99,7 +107,7 @@
     <geometry>
       <mesh filename="file://$(find usf_robot_description)/meshes/wrist_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="dark_evergreen"/>
   </visual>
   <collision>
     <origin xyz="0.009156 0.000935 -0.40079" rpy="0 0 0"/>
@@ -120,7 +128,7 @@
     <geometry>
       <mesh filename="file://$(find usf_robot_description)/meshes/claw0_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="gold"/>
   </visual>
   <collision>
     <origin xyz="0.001497 -0.023737 -0.429729" rpy="0 0 0"/>
@@ -141,7 +149,7 @@
     <geometry>
       <mesh filename="file://$(find usf_robot_description)/meshes/claw1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="gold"/>
   </visual>
   <collision>
     <origin xyz="0.018998 -0.01558 -0.432148" rpy="0 0 0"/>
@@ -160,18 +168,18 @@
 </joint>
 
 <joint name="link1_to_link0" type="revolute">
-  <origin xyz="0.180411 -0.204778 0.451327" rpy="0 0 0"/>
+  <origin xyz="0.002123 -0.03474 0.069949" rpy="0 0 0"/>
   <parent link="link0_1"/>
   <child link="link1_1"/>
-  <axis xyz="0.0 -1.0 -0.0"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
   <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
 <joint name="link2_to_link1" type="revolute">
-  <origin xyz="-0.1798 0.169567 -0.257406" rpy="0 0 0"/>
+  <origin xyz="0.0005 0.000946 0.128635" rpy="0 0 0"/>
   <parent link="link1_1"/>
   <child link="link2_1"/>
-  <axis xyz="-0.0 -1.0 -0.0"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
   <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
@@ -187,16 +195,17 @@
   <origin xyz="0.007659 0.024672 0.028939" rpy="0 0 0"/>
   <parent link="wrist_1"/>
   <child link="claw0_1"/>
-  <axis xyz="0.0 -1.0 -0.0"/>
-  <limit upper="1.134464" lower="-0.261799" effort="100" velocity="100"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="0.0" lower="-1.25" effort="100" velocity="100"/>
 </joint>
 
 <joint name="claw1_to_wrist" type="revolute">
   <origin xyz="-0.009842 0.016515 0.031358" rpy="0 0 0"/>
   <parent link="wrist_1"/>
   <child link="claw1_1"/>
-  <axis xyz="-0.0 1.0 0.0"/>
-  <limit upper="1.134464" lower="-0.261799" effort="100" velocity="100"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+  <limit upper="1.25" lower="-1.134464" effort="100" velocity="100"/>
+  <mimic joint="claw0_to_wrist" multiplier="1.0"/>
 </joint>
 
 </robot>

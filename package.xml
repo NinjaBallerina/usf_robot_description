@@ -4,7 +4,7 @@
 <name>usf_robot_description</name>
   <version>0.0.0</version>
 <description>The usf_robot_description package</description>
-  <maintainer email="todo@todo.com">author</maintainer>
+  <maintainer email="fwinters@usf.edu">Farida</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>xacro</depend>
