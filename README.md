@@ -1,3 +1,5 @@
+![USF](https://github.com/user-attachments/assets/f58ee28a-f66e-4856-bd13-17bbe1850212)
+
 # USF Robot Description
 This package provides a `ROS 2 Humble` setup for visualizing a 5 DOF 3D printed robot with a claw gripper in **RViz2**. Developed for the **University of South Florida**, this package allows users to interact with the robot using joint state publisher sliders.
 
